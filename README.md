@@ -23,13 +23,15 @@ The docker-compose file has the following environment variables:
 - `PGADMIN_DEFAULT_PASSWORD` the default value is **SuperSecret**
 - `PGADMIN_LISTEN_PORT` the default value is **49152**
 
-## Access to pgAdmin:
+## Usage
 
-- **URL:** `http://localhost:49152` (as default)
-- **Username:** pgadmin@pgadmin.org (as a default)
-- **Password:** SuperSecret (as a default)
+### Access to pgAdmin:
 
-## Configure postgres within pgAdmin:
+- **URL:** [`http://localhost:49152`](http://localhost:49152) (by default)
+- **Username:** `pgadmin@pgadmin.org` (by default)
+- **Password:** `SuperSecret` (by default)
+
+### Configure postgres within pgAdmin:
 
 - **Host name/address** `postgres`
 - **Port** `5432`
@@ -37,13 +39,18 @@ The docker-compose file has the following environment variables:
 - **Username** as `POSTGRES_USER`, by default: `postgres`
 - **Password** as `POSTGRES_PASSWORD`, by default `SuperSecret`
 
-## Shutdown
+### Shutdown
 
 - run `$ docker-compose down` from the directory hosting the docker-compose file
+
+### More
+
+For more detailed instructions about how to start and control your Postgres container, see the documentation for the postgres image [here](https://registry.hub.docker.com/_/postgres/).
 
 ## Resources
 
 - docker image postgis : https://registry.hub.docker.com/r/postgis/postgis
+- docker image for postgres : https://registry.hub.docker.com/_/postgres/
 - additional pgAdmin configuration : https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html
 
 ## License
