@@ -39,6 +39,22 @@ The docker-compose file has the following environment variables:
 - **Username** as `POSTGRES_USER`, by default: `postgres`
 - **Password** as `POSTGRES_PASSWORD`, by default `SuperSecret`
 
+### postgis container acess
+
+Once you have started a database container, you can then connect to the database as follows:
+
+- run `$ docker exec -ti postgres_container /bin/bash`
+
+then the usual `psql`, `pg_restore` comands are available, for instance:
+
+```
+root@c01fb351f02c:/# psql -U postgres
+psql (12.2 (Debian 12.2-2.pgdg100+1))
+Type "help" for help.
+
+postgres=#
+```
+
 ### Shutdown
 
 - run `$ docker-compose down` from the directory hosting the docker-compose file
